@@ -4,7 +4,7 @@ Simulación Monte Carlo en R para comparar **DIFFIT** y **scree plot multiway** 
 
 ## Contenido
 
-- [Script documentado](simulacion_tucker3_optimizada%20esta%20version%20usar%201209%20documentada.R): programa autónomo de simulación, ajuste, análisis y exportación, con comentarios en español.
+- [Script documentado](simulacion_tucker3-dimensionalidad.R): programa autónomo de simulación, ajuste, análisis y exportación, con comentarios en español.
 - `README.md`: guía de ejecución y resultados.
 
 La versión documentada conserva las 101 expresiones de R del archivo original: se verificó su identidad con `parse(..., keep.source = FALSE)`. Esa comprobación no equivale a ejecutar toda la simulación ni valida sus conclusiones estadísticas. No se incluyen resultados Monte Carlo precalculados.
@@ -20,8 +20,8 @@ install.packages("openxlsx")
 Descarga el repositorio con **Code → Download ZIP** o clónalo:
 
 ```sh
-git clone https://github.com/joluvasquez/Tucker3-Dimensionalidad-simulacion.git
-cd Tucker3-Dimensionalidad-simulacion
+git clone https://github.com/joluvasquez/Tucker3-Dimensionalidad.git
+cd Tucker3-Dimensionalidad
 ```
 
 En RStudio, establece la carpeta descargada como directorio de trabajo. Puedes comprobarla con `getwd()`.
@@ -40,7 +40,7 @@ Sys.setenv(
 )
 
 source(
-  "simulacion_tucker3_optimizada esta version usar 1209 documentada.R",
+  "simulacion_tucker3-dimensionalidad.R",
   encoding = "UTF-8"
 )
 ```
@@ -60,7 +60,7 @@ Sys.unsetenv(c(
 ))
 
 source(
-  "simulacion_tucker3_optimizada esta version usar 1209 documentada.R",
+  "simulacion_tucker3-dimensionalidad.R",
   encoding = "UTF-8"
 )
 ```
