@@ -2,12 +2,20 @@
 
 Simulación Monte Carlo en R para comparar **DIFFIT** y **scree plot multiway** en la selección de los rangos de un modelo Tucker3. Ambos criterios se aplican a la misma tabla de modelos candidatos para cada tensor, lo que permite comparar sus aciertos de forma emparejada.
 
+## Comparaciones V1–V2 y análisis controlados (octubre de 2026)
+
+La carpeta [comparisons](comparisons) contiene los resultados, el código y un paquete completo para reproducir las selecciones sobre **5.400 conjuntos de ajustes guardados (199.800 modelos candidatos)**. Incluye comparaciones DIFFIT/scree V1–V2, ocho variantes controladas de DIFFIT, análisis del espaciado del scree, intervalos Monte Carlo pareados y comprobaciones de la aplicación macroeconómica.
+
+**[Guía y resultados](comparisons/README.md)** · **[Paquete reproducible](comparisons/Tucker3_reproducibility.zip)** · **[Excel de comparaciones controladas](comparisons/Comparaciones_controladas_Tucker3.xlsx)**
+
+V1 identifica la implementación inicial de los autores; V2, las reglas alternativas implementadas. Estas etiquetas no implican superioridad ni equivalencia automática con una formulación bibliográfica. Los scripts de reproducción reutilizan los mismos ajustes y no vuelven a ejecutar ALS. Los resultados se limitan al diseño estudiado.
+
 ## Contenido
 
 - [Script documentado](simulacion_tucker3-dimensionalidad.R): programa autónomo de simulación, ajuste, análisis y exportación, con comentarios en español.
 - `README.md`: guía de ejecución y resultados.
 
-La versión documentada conserva las 101 expresiones de R del archivo original: se verificó su identidad con `parse(..., keep.source = FALSE)`. Esa comprobación no equivale a ejecutar toda la simulación ni valida sus conclusiones estadísticas. No se incluyen resultados Monte Carlo precalculados.
+La versión documentada conserva las 101 expresiones de R del archivo original: se verificó su identidad con `parse(..., keep.source = FALSE)`. Esa comprobación no equivale a ejecutar toda la simulación ni valida sus conclusiones estadísticas. Los resultados precalculados y sus verificaciones se incorporan ahora en `comparisons`.
 
 ## Requisitos
 
